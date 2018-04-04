@@ -1,3 +1,6 @@
 .header-nav{
-    background-color: lighten($main-color, 10%); 
+    background-color: lighten($main-color, 10%);
+    &__logo{
+        display: inline-block;
+    }
 }

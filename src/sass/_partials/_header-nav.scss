@@ -1,16 +1,39 @@
 .header-nav{
+    
+    $h: 50px;
     background-color: lighten($main-color, 10%);
+    .js &{
+        height: $h;
+        overflow: hidden;
+        .container{
+            height: 100%;
+        }
+    }
     
     &__logo{
         display: inline-block;
         max-width: 350px;
-        height: 50px;
+        height: $h;
         position: relative;
         top: 10px;
     }
     
     &__hamburgger{
         display: none;
+        .js &{
+            display: inline-block;
+            float: right;
+            height: 100%;
+            border: none;
+            background: transparent;
+            color: white;
+            font-size: 2em;
+            padding: .1em .5em;
+            
+            &:hover, &:focus{
+                background: lighten($main-color, 5%);
+            }
+        }
     }
     
     &__menu{

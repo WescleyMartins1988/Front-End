@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400");
+h1, h2, h3, h4, h5, h5, h6, .title {
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif; }
+
 .header-nav {
   background-color: #84b8af; }
   .js .header-nav {
@@ -44,5 +48,13 @@
       display: block; }
 
 .header-animado {
-  height: 300px;
   background-color: #64a59a; }
+  .header-animado__title {
+    color: #00151a;
+    font-size: 38px;
+    font-weight: bold; }
+  .header-animado__subtitle {
+    color: white;
+    font-size: 34;
+    font-weight: 300;
+    line-height: 1.5; }

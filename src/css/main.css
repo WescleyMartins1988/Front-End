@@ -103,3 +103,51 @@ h1, h2, h3, h4, h5, h5, h6, .title {
         .header-animado__ilustra .carrosBaixo {
           background-image: url(../imagens/cenario_carrosBaixo.png);
           animation: anima_cenario 15s linear infinite; } }
+
+.card-portfolio {
+  padding: 0;
+  border-radius: 0;
+  border: 1px solid transparent; }
+  .card-portfolio:before {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    background: #777;
+    width: 50%;
+    height: 20px;
+    bottom: 12px;
+    box-shadow: 0 15px 10px #777;
+    transform: rotate(-3deg);
+    left: 5px; }
+  .card-portfolio:after {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    background: #777;
+    width: 50%;
+    height: 20px;
+    bottom: 12px;
+    box-shadow: 0 15px 10px #777;
+    transform: rotate(-3deg);
+    left: 5px; }
+  .card-portfolio__imagem {
+    height: 230px;
+    overflow: hidden; }
+    .card-portfolio__imagem img {
+      max-width: 100%;
+      opacity: .5;
+      transition: opacity .3s linear; }
+  .card-portfolio:hover img {
+    opacity: 1; }
+  .card-portfolio:hover .card-portfolio__btn {
+    background: #c5ddd9;
+    color: #fff; }
+    .card-portfolio:hover .card-portfolio__btn:hover {
+      background: #3fcab2; }
+  .card-portfolio__btn {
+    background: transparent;
+    display: block;
+    color: #64a59a;
+    border: none;
+    border-radius: 0;
+    transition: all .3s linear; }

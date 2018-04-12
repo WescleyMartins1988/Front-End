@@ -9,7 +9,8 @@
         height: 20px;
         bottom: 12px;
         box-shadow: 0 15px 10px #777;
-        @if $dir = 'esq'{
+        
+        @if $dir == 'esq'{
             transform: rotate($angle * -1);
             left: $distance;
         }@else{
@@ -30,6 +31,7 @@
     padding: 0;
     border-radius: 0;
     border: 1px solid transparent;
+    position: relative;
     
     &__imagem{
         height: 230px;
@@ -59,7 +61,7 @@
     
     &__btn{
         background: transparent;
-        display: block;
+        //display: block;
         color: $main-color;
         border: none;
         border-radius: 0;

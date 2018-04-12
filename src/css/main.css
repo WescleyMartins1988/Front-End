@@ -137,9 +137,10 @@ h1, h2, h3, h4, h5, h5, h6, .title {
     .card-portfolio__imagem img {
       max-width: 100%;
       opacity: .5;
-      transition: opacity .3s linear; }
+      transition: opacity .3s linear, transform 1s ease-in; }
   .card-portfolio:hover img {
-    opacity: 1; }
+    opacity: 1;
+    transform: scale(1.15); }
   .card-portfolio:hover .card-portfolio__btn {
     background: #c5ddd9;
     color: #fff; }
@@ -150,4 +151,6 @@ h1, h2, h3, h4, h5, h5, h6, .title {
     color: #64a59a;
     border: none;
     border-radius: 0;
-    transition: all .3s linear; }
+    transition: all .3s linear;
+    margin-left: 117px;
+    position: relative; }

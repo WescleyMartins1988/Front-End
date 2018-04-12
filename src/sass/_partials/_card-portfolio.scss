@@ -41,13 +41,14 @@
             max-width: 100%;
             //Transparencia
             opacity: .5;
-            transition: opacity .3s linear;
+            transition: opacity .3s linear, transform 1s ease-in;
         }
     }
     //Causa um efeito quando se passa o mouse
     &:hover{
         img{
             opacity: 1;
+            transform: scale(1.15);
         }
         
         .card-portfolio__btn{
@@ -67,5 +68,7 @@
         border-radius: 0;
         //width: 100%;
         transition: all .3s linear;
+        margin-left: 117px;
+        position: relative;
     }
 }

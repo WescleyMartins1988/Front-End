@@ -4,6 +4,7 @@
     background-color: lighten($main-color, 10%);
     .js &{
         height: $h;
+        //overflow: hidden;
         
         .container{
             height: 100%;
@@ -58,11 +59,11 @@
             }
         }
         
-        .js{
+        .js &{
             display: none;
         }
         
-        .menu-opened{
+        .menu-opened &{
             display: block;
         }
     }

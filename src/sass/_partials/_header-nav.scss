@@ -1,6 +1,23 @@
+.js.menu-opened{
+    overflow: hidden;
+    &:after{
+        content: "";
+        display: block;
+        position: fixed;
+        top: 50px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        
+        background: rgba(0,0,0,.2);
+    }
+}
+
 .header-nav{
     
     $h: 50px;
+    $breakPoint: 680px;
+    
     background-color: lighten($main-color, 10%);
     .js &{
         height: $h;
@@ -17,6 +34,7 @@
         height: $h;
         position: relative;
         top: 10px;
+        z-index: 20;
         
         img{
             max-width: 100%;
@@ -26,6 +44,7 @@
     
     &__hamburgger{
         display: none;
+        
         .js &{
             display: inline-block;
             float: right;
@@ -34,10 +53,14 @@
             background: transparent;
             color: white;
             font-size: 2em;
-            padding: .1em .5em;
+            padding: 0 .5em;
             
             &:hover, &:focus{
                 background: lighten($main-color, 5%);
+            }
+            
+            @media screen and (min-width: #{$breakPoint}){
+                display: none;
             }
         }
     }
@@ -60,11 +83,34 @@
         }
         
         .js &{
-            display: none;
+            @media screen and (max-width: #{$breakPoint}){
+                background: darken($main-color, 10);
+                position: fixed;
+                top: $h;
+                left: -100%;
+                width: 80%;
+                bottom: 0;
+                transition: left .3s ease-out;
+            }
+            
         }
         
         .menu-opened &{
             display: block;
+            @media screen and (max-width: #{$breakPoint}){
+                left: 0;
+            }
+            
         }
+        
+        @media screen and (min-width: #{$breakPoint}){
+                display: inline-block;
+                float: right;
+                height: $h;
+                
+                li{
+                    display: inline-block;
+                }
+            }
     }
 }

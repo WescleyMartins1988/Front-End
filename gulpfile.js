@@ -24,7 +24,7 @@ gulp.task('copy', ['clean'], function(){
 gulp.task('sass', function(){
     gulp.src('./src/sass/**/*.scss')
         .pipe(sass())
-        .pipe(gulp.dest('./src/css/'));
+        .pipe(gulp.dest('./dist/css/'));
 })
 
 gulp.task('html', function(){
@@ -40,7 +40,8 @@ gulp.task('server', ['html'], function(){
             baseDir: 'dist'
         }
     })
-   gulp.watch('./src/**/*').on('change', browserSync.reload)
-   gulp.watch('./src/sass/**/*.scss', ['sass']) 
+   gulp.watch('./dist/**/*').on('change', browserSync.reload)
+   gulp.watch('./src/sass/**/*.scss', ['sass'])
+   gulp.watch('./src/**/*.html', ['html'])
     
 })

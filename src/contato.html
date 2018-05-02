@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-with">
+    <title>Site Pessoal Silva Silveira</title>
+    <link rel="stylesheet" href="components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
+ 
+</head>
+<body>
+@@include('./inc/nav.html')
+     <div class="jumbotron jumbotron-fluid header-animado">
+         <div class="container">
+             <p class="header-animado__title">Vamos bater um papo ?</p>
+             <h1 class="header-animado__subtitle">Entre em contato que eu responderei o mais brave possível.</h1>
+         </div>
+         
+     </div>
+     <div class="container">
+         <div class="row">
+             <div class="col-12 col-lg-8 col-lg-offset-2">
+                 <form id="contactForm">
+                     <div class="form-group">
+                        <label for="textNome">Nome</label>
+                        <input type="text" class="form-control" id="textNome" aria-describedby="emailHelp" placeholder="Nome Completo">
+                     </div>
+                     
+                     <div class="form-group">
+                        <label for="textEmail">E-mail</label>
+                        <input type="email" class="form-control" id="textEmail" aria-describedby="emailHelp" placeholder="Digite um e-mail">
+                     </div>
+                     
+                     <div class="form-group">
+                        <label for="textMessage">Mensagem</label>
+                        <textarea class="form-control" id="textMessage"></textarea>
+                     </div>
+                     
+                     <div class="form-group">
+                         <button type="submit" class="btn btn-lg">Enviar</button>
+                     </div>
+                 </form>
+             </div>
+         </div><!--row-->
+         <hr>
+     </div><!--container-->
+@@include('./inc/footer.html')
+<script src="javascript/main.js"></script>
+<script src="javascript/menu.js"></script>    
+<script src="components/jquery/jquery.min.js"></script>
+<script src="components/popper.js/popper.min.js"></script>
+<script src="components/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

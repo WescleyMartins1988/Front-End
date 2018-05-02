@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-with">
+    <title>Site Pessoal Silva Silveira</title>
+    <link rel="stylesheet" href="components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
+ 
+</head>
+<body>
+<nav class="header-nav">
+        <div class="container">
+            <a href="index.html" class="header-nav__logo">
+                <img src="imagens/logo.svg" alt="LogoTipo Silva Silveira">
+            </a>
+            <button aria-controls="mainMenu" class="header-nav__hamburgger" type="button" aria-expanded="false">
+                <div class="header-nav__hamburggerParties">
+                    <span class="sr-only">Menu</span>
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </div></button>
+            <ul class="header-nav__menu" id="mainMenu">
+                <li><a href="portfolio.html">Portifólio</a></li>
+                <li><a href="sobre.html">Sobre mim</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </div>
+    </nav> 
+     <div class="jumbotron jumbotron-fluid header-animado">
+         <div class="container">
+             <p class="header-animado__title">Vamos bater um papo ?</p>
+             <h1 class="header-animado__subtitle">Entre em contato que eu responderei o mais brave possível.</h1>
+         </div>
+         
+     </div>
+     <div class="container">
+         <div class="row">
+             <div class="col-12 col-lg-8 col-lg-offset-2">
+                 <form id="contactForm">
+                     <div class="form-group">
+                        <label for="textNome">Nome</label>
+                        <input type="text" class="form-control" id="textNome" aria-describedby="emailHelp" placeholder="Nome Completo">
+                     </div>
+                     
+                     <div class="form-group">
+                        <label for="textEmail">E-mail</label>
+                        <input type="email" class="form-control" id="textEmail" aria-describedby="emailHelp" placeholder="Digite um e-mail">
+                     </div>
+                     
+                     <div class="form-group">
+                        <label for="textMessage">Mensagem</label>
+                        <textarea class="form-control" id="textMessage"></textarea>
+                     </div>
+                     
+                     <div class="form-group">
+                         <button type="submit" class="btn btn-lg">Enviar</button>
+                     </div>
+                 </form>
+             </div>
+         </div><!--row-->
+         <hr>
+     </div><!--container-->
+<footer class="rodape">
+    <div class="container">
+        <div class="row">
+            <p class="text-right">Social:</p>
+            <ul class="list-inline pull-right">
+                <li><a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook-f"></i></a></li>
+                <li><a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a></li>
+                <li><a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a></li>
+                <li><a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a></li>
+                <li><a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-dribbble"></i></a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+<script src="javascript/main.js"></script>
+<script src="javascript/menu.js"></script>    
+<script src="components/jquery/jquery.min.js"></script>
+<script src="components/popper.js/popper.min.js"></script>
+<script src="components/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -8,6 +8,7 @@ var gulp         = require('gulp'),
     cssnamo      = require('gulp-cssnano'),
     concat       = require('gulp-concat'),
     uglify       = require('gulp-uglify'),
+    rename       = require('gulp-rename'),
     browserSync  = require('browser-sync');
 
 gulp.task('clean', function(){
@@ -20,7 +21,7 @@ gulp.task('copy', ['clean'], function(){
               'src/components/font-awesome/css/**/*',
               'src/components/font-awesome/fonts/**/*',
               'src/components/jquery/dist/**/*'], {"base": "src"})
-        .pipe(gulp.dest('dist'))
+               .pipe(gulp.dest('dist'))
     
 })
 
@@ -62,8 +63,15 @@ gulp.task('build-js', function(){
         .pipe(gulp.dest('./dist/javascript/'))
 })
 
+gulp.task('svgmin', function(){
+    return gulp.src(['./src/inc/icons/*.svg', '!./src/inc/icons/*.min.svg'])
+        .pipe(imagemin())
+        .pipe(rename({suffix: '.min'}))
+        .pipe(gulp.dest('./src/inc/icons/'))
+})
+
 gulp.task('default', ['copy'], function(){
-    gulp.start('uncss', 'imagemin', 'sass', 'build-js')
+    gulp.start('uncss', 'imagemin', 'sass', 'build-js', 'svgmin')
 })
 
 //Server 
@@ -77,5 +85,5 @@ gulp.task('server', function(){
    gulp.watch('./src/sass/**/*.scss', ['sass'])
    gulp.watch('./src/**/*.html', ['html'])
    gulp.watch('./src/javascript/**/*', ['build-js'])
-    
+   gulp.watch(['./src/inc/icons/*.svg', '!./src/inc/icons/*.min.svg'], ['svgmin'])
 })

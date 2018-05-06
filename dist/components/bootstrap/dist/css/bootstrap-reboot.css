@@ -77,6 +77,10 @@ img {
   border-style: none;
 }
 
+svg:not(:root) {
+  overflow: hidden;
+}
+
 label {
   display: inline-block;
   margin-bottom: .5rem;

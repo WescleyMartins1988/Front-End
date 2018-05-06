@@ -1,6 +1,11 @@
 .rodape{
+    
+    .color-icon{
+        fill: red;
+    }
+    
     background: lighten($main-color, 30);
-    color: white;
+    color: darken($main-color, 10%);
     padding: 1em 0;
     ul{
         overflow: auto;
@@ -16,7 +21,7 @@
         
         li a{
             font-size: 1.5em;
-            color: white;
+            color: inherit;
             display: block;
             text-align: right;
         }
